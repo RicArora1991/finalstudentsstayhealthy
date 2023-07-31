@@ -1,16 +1,24 @@
 import React from 'react'
-
+import './SelfChekup.css'
 const SelfCheckup = () => {
     return (
-        <div container>
+        <div className="self_container">
+        
+        <div className="self_checkup_container1" style={{alignContent:'left'}}>
+   
             <div className="One_temperature">
-               <span>Measure Your Body Temperature</span> 
-                Monitoring your body temperature can help identify signs of a potential fever. For adults, the average normal temperature is approximately 37°C (98.6°F), but this can vary based on factors such as age, time of day, and the location on the body where the temperature is taken. It's a good idea to check your temperature when you're feeling well to establish your baseline normal temperature. To ensure accuracy, invest in a reliable thermometer.
+             <div className="temp_heading"><span>Measure Your Body Temperature</span> </div>  
+             <img src="https://e7.pngegg.com/pngimages/190/259/png-clipart-digital-thermometer-displaying-37-medical-thermometers-infrared-thermometers-temperature-mercury-in-glass-thermometer-thermometer-miscellaneous-measurement-thumbnail.png" alt="" />
+               <div className="temp_desc"> Monitoring your body temperature can help identify signs of a potential fever. For adults, the average normal temperature is approximately 37°C (98.6°F), but this can vary based on factors such as age, time of day, and the location on the body where the temperature is taken. It's a good idea to check your temperature when you're feeling well to establish your baseline normal temperature. To ensure accuracy, invest in a reliable thermometer.
 
                 While some wearable devices claim to measure body temperature, their reliability may be questionable. If you're dealing with a high temperature, especially in the case of a child, it can be a cause for concern. If you're worried, seek medical advice either through an in-person consultation or a virtual appointment."
             </div>
+            </div>
+            </div>
+         
+             <div className="self_checkup_container2">
         <div className="two_heartrate">
-        <span>Listen Your Heart Rate</span> 
+       <div><span>Listen Your Heart Rate</span> </div> 
 
         Checking your heart rate can provide valuable insights into your overall well-being, particularly when measured in a relaxed state in the morning. The normal heart rate varies depending on factors such as age and fitness level, so it's beneficial to establish your baseline pulse rate by checking it every morning for a week. You have various options to measure your heart rate, including manual methods, heart rate monitors, fitness trackers, or smartphone apps.
 
@@ -38,6 +46,7 @@ In conclusion, monitoring your heart rate regularly provides valuable insights i
 
 
 
+        </div>
         </div>
         </div>
     )

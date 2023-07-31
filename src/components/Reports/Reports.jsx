@@ -35,7 +35,7 @@ const Reports = () => {
         <table className="report-table">
             <thead>
             <tr>
-                <th>Serial Number</th>
+                <th>S.No.</th>
                 <th>Doctor Name</th>
                 <th>Doctor Speciality</th>
                 {/* <th>Charges</th> */}

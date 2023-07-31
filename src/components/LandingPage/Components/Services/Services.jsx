@@ -14,7 +14,7 @@ const demoData = [
     },
     {
         imageSrc: 'https://img.freepik.com/free-vector/doctor-examining-patient-clinic-illustrated_23-2148856559.jpg?size=626&ext=jpg',
-        title: 'Find a doctor',
+        title: 'Self Checkup',
     },
     {
         imageSrc: 'https://img.freepik.com/free-vector/hospital-service-concept-flat-illustration_1150-50287.jpg?size=626&ext=jpg',
@@ -205,8 +205,8 @@ const Services = () => {
                                 <Link to="/instant-consultation">
                                 <p>{data.title}</p>
                                 </Link>
-                            ) : data.title === 'Find a doctor' ? (
-                                <Link to="/find-doctor">
+                            ) : data.title === 'Self Checkup' ? (
+                                <Link to="/self-checkup">
                                 <p>{data.title}</p>
                                 </Link>
                             // : data.title === 'Find a doctor' ? (

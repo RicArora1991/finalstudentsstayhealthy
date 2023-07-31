@@ -51,11 +51,11 @@ const Reviews = () => {
       <table className="report-table">
         <thead>
           <tr>
-            <th>Serial Number</th>
+            <th>S.No.</th>
             <th>Doctor Name</th>
             <th>Doctor Speciality</th>
             {/* <th>Charges</th> */}
-            <th>Give Review</th>
+            <th>Provide Review</th>
             <th>Review Given</th>
           </tr>
         </thead>

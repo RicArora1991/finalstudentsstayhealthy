@@ -3,8 +3,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import { API_URL } from '../../config';
 
 const Login = () => {
-  const [name, setName] = useState("");
+  // const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+  const [email, setEmail] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
 
   const togglePasswordVisibility = () => {
@@ -26,7 +27,8 @@ const Login = () => {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        name: name,
+        // name: name,
+        email:email,
         password: password,
       }),
     });
@@ -34,7 +36,9 @@ const Login = () => {
     const json = await res.json();
     if (json.authtoken) {
       sessionStorage.setItem('auth-token', json.authtoken);
-      sessionStorage.setItem('name', name);
+      // sessionStorage.setItem('name', name);
+      sessionStorage.setItem('email', email);
+
       // Redirect to home page
       navigate('/');
       window.location.reload()
@@ -62,7 +66,7 @@ const Login = () => {
           <br />
           <div className="login-form">
             <form onSubmit={login}>
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="username">Username</label>
                 <input
                   value={name}
@@ -74,7 +78,11 @@ const Login = () => {
                   placeholder="Enter your username"
                   aria-describedby="helpId"
                 />
-              </div>
+              </div> */}
+              <div className="form-group">
+                        <label htmlFor="email">Email</label>
+                        <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" />
+                    </div>
               <div className="form-group">
                 <label htmlFor="password">Password</label>
                 <input

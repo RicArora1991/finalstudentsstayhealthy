@@ -10,6 +10,7 @@ const Navbar = () => {
 
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [username, setUsername] = useState("");
+    const[email,setEmail]=useState("");
     const [showDropdown, setShowDropdown] = useState(false);
     const handleClick = () => setClick(!click);
 
@@ -22,7 +23,8 @@ const Navbar = () => {
         // remove email phone
         localStorage.removeItem("doctorData");
         setIsLoggedIn(false);
-        setUsername("");
+        // setUsername("");
+       
         // Remove the reviewFormData from local storage
         for (let i = 0; i < localStorage.length; i++) {
           const key = localStorage.key(i);
@@ -30,6 +32,7 @@ const Navbar = () => {
             localStorage.removeItem(key);
           }
         }
+        setEmail('');
         window.location.reload();
     }
     const handleDropdown = () => {
@@ -37,12 +40,19 @@ const Navbar = () => {
     }
     useEffect(() => {
       // Check if the user is already logged in
-      const storedUsername = sessionStorage.getItem("name");
-      if (storedUsername) {
-        setIsLoggedIn(true);
-        setUsername(storedUsername);
-      }
-    }, []);
+      // const storedUsername = sessionStorage.getItem("name");
+      // if (storedUsername) {
+        //     setIsLoggedIn(true);
+        //     setUsername(storedUsername);
+        //   }
+        // }, []);
+      const storedemail = sessionStorage.getItem("email");
+
+      if (storedemail) {
+            setIsLoggedIn(true);
+            setUsername(storedemail);
+          }
+        }, []);
   return (
     <nav>
       <div className="nav__logo">
