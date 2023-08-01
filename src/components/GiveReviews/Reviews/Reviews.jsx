@@ -53,10 +53,10 @@ const Reviews = () => {
           <tr>
             <th>S.No.</th>
             <th>Doctor Name</th>
-            <th>Doctor Speciality</th>
+            <th>Doctor Specialty</th>
             {/* <th>Charges</th> */}
             <th>Provide Review</th>
-            <th>Review Given</th>
+            <th>Review Feedback</th>
           </tr>
         </thead>
         <tbody>
@@ -74,7 +74,7 @@ const Reviews = () => {
                         className="give-review-button"
                         onClick={() => handleGiveReview(report.serialNumber)}
                       >
-                        Give Review
+                        Feedback
                       </button>
                     }
                     modal

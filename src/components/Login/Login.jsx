@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { API_URL } from '../../config';
 
 const Login = () => {
-  // const [name, setName] = useState("");
+  const [name, setName] = useState("");
   const [password, setPassword] = useState("");
   const [email, setEmail] = useState('');
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -36,7 +36,7 @@ const Login = () => {
     const json = await res.json();
     if (json.authtoken) {
       sessionStorage.setItem('auth-token', json.authtoken);
-      // sessionStorage.setItem('name', name);
+      sessionStorage.setItem('name', name);
       sessionStorage.setItem('email', email);
 
       // Redirect to home page

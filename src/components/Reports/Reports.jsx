@@ -37,7 +37,7 @@ const Reports = () => {
             <tr>
                 <th>S.No.</th>
                 <th>Doctor Name</th>
-                <th>Doctor Speciality</th>
+                <th>Doctor Specialty</th>
                 {/* <th>Charges</th> */}
                 <th>View Report</th>
                 <th>Download Report</th>

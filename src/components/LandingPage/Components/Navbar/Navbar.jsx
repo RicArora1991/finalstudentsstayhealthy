@@ -42,10 +42,12 @@ const Navbar = () => {
       // Check if the user is already logged in
       // const storedUsername = sessionStorage.getItem("name");
       // if (storedUsername) {
-        //     setIsLoggedIn(true);
-        //     setUsername(storedUsername);
-        //   }
-        // }, []);
+      //       setIsLoggedIn(true);
+      //       setUsername(storedUsername);
+      //     }
+      //   }, []);
+
+        // below code is in case of showing email in navbar 
       const storedemail = sessionStorage.getItem("email");
 
       if (storedemail) {
@@ -76,7 +78,7 @@ const Navbar = () => {
         <li className="link">
          <Link to="/reviews">Reviews</Link>
         </li>
-        {isLoggedIn ? (
+        {isLoggedIn?(
           <>
           {/* Update username and update DB */}
             {/* <li className="link welcome-user">Welcome, {username}</li> */}
@@ -110,7 +112,7 @@ const Navbar = () => {
             </li>
             <li className="link">
               <Link to="/login">
-                <button className="btn1">LogIn</button>
+                <button className="btn1">Login</button>
               </Link>
             </li>
           </>
@@ -121,3 +123,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+

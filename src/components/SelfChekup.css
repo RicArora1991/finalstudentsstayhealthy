@@ -1,20 +1,33 @@
 .self_container{
-    margin-top:10% ;
+    /* margin-top:10%; */
     display: flex;
     flex-direction: column;
     gap: 30px;
 }
 
-.self_checkup_container1{
-    width: 700px;
-   margin-left:50px ;
+.selfcheck_startheading{
+  text-align: justify;
+    width: 1000px;
+   margin:auto ; 
     /* margin: 10% auto; */
-    padding: 20px;
-    background-color: #f5f5f5;
+     padding: 20px;
+    background-color: #0072c3;
+    color: white;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 4px rgba(192, 39, 39, 0.1); */
+}
+
+ .self_checkup_container1{
+  text-align: justify;
+    width: 700px;
+   margin-left:50px ; 
+    /* margin: 10% auto; */
+     padding: 20px;
+    background-color: #f2f4f8;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-.One_temperature .temp_heading{
+/*.One_temperature .temp_heading{
 font-size: 30px;
 font-weight: 800;
 }
@@ -23,14 +36,68 @@ font-weight: 800;
     text-align: justify;
     font-weight: 500;
 
-    }
+    } */
 .self_checkup_container2{
-    width: 700px;
+    width: 700px; 
+    text-align: justify;
     /* margin-top:10% ; */
     margin: auto;
-    margin-right: 50px;
+  margin-right: 50px;
     padding: 20px;
-    background-color: #f5f5f5;
+    background-color: #f2f4f8;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} 
+
+/* healthTestsStyles.css */
+.self_container{
+    /* margin-top:50% ; */
+    margin: 0 auto;
+    /* display: flex;
+    flex-direction: column;
+    gap: 30px; */
 }
+.health-tests-container {
+    /* margin-top:10% ; */
+    max-width: 800px;
+    margin: 10% auto;
+    padding: 20px;
+  }
+  
+  .health-test-topic {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  
+  .health-test-topic h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .health-test-topic p {
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .health-test-topic .read-more {
+    color: #007bff;
+    cursor: pointer;
+  }
+  
+  .health-test-topic .details {
+    display: none;
+  }
+  
+  .health-test-topic.expanded .details {
+    display: block;
+  }
+  
+  .btnsefcheck{
+    background-color: #33b1ff;
+    width: 150px;
+  }

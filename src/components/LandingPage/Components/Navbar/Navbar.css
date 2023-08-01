@@ -35,7 +35,8 @@ nav {
 
 .dropdown-menu li {
   display: block;
-  padding: 8px 16px;
+  width: 150px;
+  padding:5px;
 }
 
 .dropdown-menu li a {

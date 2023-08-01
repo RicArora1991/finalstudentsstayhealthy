@@ -2,36 +2,36 @@ import { useState } from 'react';
 import './FindDoctorSearch.css';
 import { useNavigate, Navigate } from 'react-router-dom';
 
-const initLocations = [
-    {
-        place: "Raipur",
-        city: "Raipur"
-    },
-    {
-        place: "Delhi",
-        city: "Delhi"
-    },
-    {
-        place: "Indore",
-        city: "Indore"
-    },
-    {
-        place: "Sapna Sangeeta",
-        city: "Indore"
-    },
-    {
-        place: "Ab Road",
-        city: "Indore"
-    },
-    {
-        place: "Lig Colony",
-        city: "Indore"
-    },
-    {
-        place: "Sudama Nagar",
-        city: "Indore"
-    },
-]
+// const initLocations = [
+//     {
+//         place: "Raipur",
+//         city: "Raipur"
+//     },
+//     {
+//         place: "Delhi",
+//         city: "Delhi"
+//     },
+//     {
+//         place: "Indore",
+//         city: "Indore"
+//     },
+//     {
+//         place: "Sapna Sangeeta",
+//         city: "Indore"
+//     },
+//     {
+//         place: "Ab Road",
+//         city: "Indore"
+//     },
+//     {
+//         place: "Lig Colony",
+//         city: "Indore"
+//     },
+//     {
+//         place: "Sudama Nagar",
+//         city: "Indore"
+//     },
+// ]
 
 const initSpeciality = [
     'Dentist', 'Gynecologist/obstetrician', 'General Physician', 'Dermatologist', 'Ear-nose-throat (ent) Specialist', 'Homeopath', 'Ayurveda'
@@ -44,7 +44,7 @@ const FindDoctorSearch = () => {
     const [searchLocation, setSearchLocation] = useState('');
     const [searchDoctor, setSearchDoctor] = useState('');
     const [specialities, setSpecialities] = useState(initSpeciality);
-    const [locations, setLocations] = useState(initLocations);
+    // const [locations, setLocations] = useState(initLocations);
 
     const navigate = useNavigate();
 
@@ -64,7 +64,7 @@ const FindDoctorSearch = () => {
                     <div className="doctor-search-box">
                     {/* <p>Perform a search to see the results.</p> */}
 
-                        <input type="text" className="search-doctor-input-box" placeholder="Search doctors, clinics, hospitals, etc." onFocus={() => setDoctorResultHidden(false)} onBlur={() => setDoctorResultHidden(true)} value={searchDoctor} onChange={(e) => setSearchDoctor(e.target.value)} />
+                        <input type="text" className="search-doctor-input-box" placeholder="Search doctors by specialty" onFocus={() => setDoctorResultHidden(false)} onBlur={() => setDoctorResultHidden(true)} value={searchDoctor} onChange={(e) => setSearchDoctor(e.target.value)} />
                         
                         <div className="findiconimg"><img className='findIcon' src={process.env.PUBLIC_URL + '/images/search.svg'} alt=""/></div>
                         <div className="search-doctor-input-results" hidden={doctorResultHidden}>

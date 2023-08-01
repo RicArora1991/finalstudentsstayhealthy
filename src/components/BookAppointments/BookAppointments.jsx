@@ -11,8 +11,7 @@ const BookAppointments = () => {
     const [isSearched, setIsSearched] = useState(false);
 
     const getDoctorsDetails = () => {
-        fetch(`https://api.npoint.io/e3c6cc64bf013781f538/doctors`)
-        // fetch('./')
+        fetch(`https://api.npoint.io/9a5543d36f1460da2f63`)
         .then(res => res.json())
         .then(data => {
             if (searchParams.get('speciality')) {
